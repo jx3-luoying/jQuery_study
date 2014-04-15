@@ -85,11 +85,11 @@ $( this ).dialog( "close" );
 close: function() {
 allFields.val( "" ).removeClass( "ui-state-error" );
 }
-//open: function(){
+open: function(){
 //var allFields = $( [] ).add( name );
 //for (var i=0;i<level.value();i++){ allFields = allFields.add( name ); }
-//$("#contentholder").val(allFields);
-//}
+$("#contentholder").val(allFields);
+}
 });
 $( "#submit" )//"#create-user" )
 .button()

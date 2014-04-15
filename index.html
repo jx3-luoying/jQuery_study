@@ -26,7 +26,6 @@ var name = $( "#name" ),
 level=$("#levelnum"),
 allFields = $( [] ),
 tips = $( ".validateTips" );
-for (var i=0;i<level.value();i++){ allFields = allFields.add( name ); }
 function updateTips( t ) {
 tips
 .text( t )
@@ -90,6 +89,7 @@ allFields.val( "" ).removeClass( "ui-state-error" );
 $( "#submit" )//"#create-user" )
 .button()
 .click(function() {
+for (var i=0;i<level.value();i++){ allFields = allFields.add( name ); }
 $( "#dialog-form" ).dialog( "open" );
 });
 });

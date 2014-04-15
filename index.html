@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <style>
 body { font-size: 62.5%; }
-label, input { display:block; }
+label, input { display:inline-block; }
 input.text { margin-bottom:12px; width:95%; padding: .4em; }
 fieldset { padding:0; border:0; margin-top:25px; }
 h1 { font-size: 1.2em; margin: .6em 0; }
@@ -22,9 +22,7 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
 <script>
 $(function() {
 var name = $( "#name" ),
-email = $( "#email" ),
-password = $( "#password" ),
-allFields = $( [] ).add( name ).add( email ).add( password ),
+allFields = $( [] ).add( name ),
 tips = $( ".validateTips" );
 function updateTips( t ) {
 tips
@@ -101,31 +99,11 @@ $( "#dialog-form" ).dialog( "open" );
 <fieldset>
 <label for="name">Name</label>
 <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
-<label for="email">Email</label>
-<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
-<label for="password">Password</label>
-<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
 </fieldset>
 </form>
 </div>
 <div id="users-contain" class="ui-widget">
-<h1>Existing Users:</h1>
-<table id="users" class="ui-widget ui-widget-content">
-<thead>
-<tr class="ui-widget-header ">
-<th>Name</th>
-<th>Email</th>
-<th>Password</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>John Doe</td>
-<td>john.doe@example.com</td>
-<td>johndoe1</td>
-</tr>
-</tbody>
-</table>
+# of level: <input type="number" name="bday"> <input type="submit">
 </div>
 <button id="create-user">Create new user</button>
 </body>

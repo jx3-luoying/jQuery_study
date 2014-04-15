@@ -83,6 +83,7 @@ $( this ).dialog( "close" );
 }
 },
 close: function() {
+  document.getElementById("inputList").remove(".appendItem");
 $( "#inputList" ).remove(".appendItem").removeClass( "ui-state-error" );
 }
 //open: function(){

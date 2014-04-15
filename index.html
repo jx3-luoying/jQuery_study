@@ -24,6 +24,7 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
 $(function() {
 var name = $( "#name" ),
 level=$("#levelnum"),
+allFields = $( [] ).add( name ),
 tips = $( ".validateTips" );
 function updateTips( t ) {
 tips
@@ -84,11 +85,11 @@ $( this ).dialog( "close" );
 close: function() {
 allFields.val( "" ).removeClass( "ui-state-error" );
 }
-open: function(){
-var allFields = $( [] ).add( name );
+//open: function(){
+//var allFields = $( [] ).add( name );
 //for (var i=0;i<level.value();i++){ allFields = allFields.add( name ); }
-$("#contentholder").val(allFields);
-}
+//$("#contentholder").val(allFields);
+//}
 });
 $( "#submit" )//"#create-user" )
 .button()

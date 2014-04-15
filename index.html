@@ -85,7 +85,7 @@ close: function() {
 allFields.val( "" ).removeClass( "ui-state-error" );
 }
 });
-$( "#create-user" )
+$( "#submit" )//"#create-user" )
 .button()
 .click(function() {
 $( "#dialog-form" ).dialog( "open" );
@@ -112,5 +112,5 @@ $( "#dialog-form" ).dialog( "open" );
 </tbody>
 </table>
 </div>-->
-# of level: <input type="number" name="levelnum"> <input type="submit"><button id="create-user">Create new user</button>
+# of level: <input type="number" name="levelnum"> <input type="submit" id="submit"><button id="create-user">Create new user</button>
 </body>

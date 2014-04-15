@@ -85,8 +85,8 @@ close: function() {
 allFields.val( "" ).removeClass( "ui-state-error" );
 }
 open: function(){
-var allFields = $( [] );
-for (var i=0;i<level.value();i++){ allFields = allFields.add( name ); }
+var allFields = $( [] ).add( name );
+//for (var i=0;i<level.value();i++){ allFields = allFields.add( name ); }
 $("#contentholder").val(allFields);
 }
 });

@@ -23,8 +23,13 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
 <script>
 $(function() {
 var name = $( "#name" ),
-allFields = $( [] ).add( name ),
+level=$("#levelnum"),
+allFields = $( [] ),
 tips = $( ".validateTips" );
+for (var i=0;i<level.value();i++)
+{
+allFields.add( name );
+}
 function updateTips( t ) {
 tips
 .text( t )
@@ -94,8 +99,8 @@ $( "#dialog-form" ).dialog( "open" );
 </script>
 </head>
 <body>
-<div id="dialog-form" title="Create new user">
-<p class="validateTips">All form fields are required.</p>
+<div id="dialog-form" title="# of difficulty level">
+<!--<p class="validateTips">All form fields are required.</p>-->
 <form>
 <fieldset>
 <label for="name">Name</label>
@@ -112,5 +117,5 @@ $( "#dialog-form" ).dialog( "open" );
 </tbody>
 </table>
 </div>-->
-# of level: <input type="number" name="levelnum"> <input type="submit" id="submit"><!--<button id="create-user">Create new user</button>-->
+# of level: <input type="number" name="levelnum" id="levelnum"> <input type="submit" id="submit"><!--<button id="create-user">Create new user</button>-->
 </body>

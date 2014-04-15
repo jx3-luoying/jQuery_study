@@ -24,7 +24,7 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
 $(function() {
 var name = $( "#name" ),
 level=$("#levelnum"),
-allFields = $( [] ),
+allFields = $( [] ).add( name ),
 tips = $( ".validateTips" );
 for (var i=0;i<level.value();i++)
 {

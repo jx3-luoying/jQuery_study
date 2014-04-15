@@ -24,6 +24,7 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
 $(function() {
 var name = $( "#name" ),
 level=$("#levelnum"),
+allFields = $( [] ).add(name).add(name);
 tips = $( ".validateTips" );
 function updateTips( t ) {
 tips
@@ -105,6 +106,7 @@ $( "#dialog-form" ).dialog( "open" );
 <fieldset>
 <label for="name">Name</label>
 <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+</fieldset>
 </form>
 </div>
 <!--<div id="users-contain" class="ui-widget">

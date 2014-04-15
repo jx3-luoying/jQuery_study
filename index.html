@@ -94,6 +94,9 @@ allFields.val( "" ).removeClass( "ui-state-error" );
 $( "#submit" )//"#create-user" )
 .button()
 .click(function() {
+  for (var i=0;i<level.value();i++){ 
+    $( "#inputList" ).appendChild('<label for="name">Name</label> <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">');
+  }
 $( "#dialog-form" ).dialog( "open" );
 });
 });
@@ -103,9 +106,8 @@ $( "#dialog-form" ).dialog( "open" );
 <div id="dialog-form" title="# of difficulty level">
 <!--<p class="validateTips">All form fields are required.</p>-->
 <form>
-<fieldset>
-<label for="name">Name</label>
-<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+<fieldset id="inputList">
+
 </fieldset>
 </form>
 </div>

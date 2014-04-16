@@ -85,14 +85,15 @@ $(function() {
           bValid = bValid && checkLength( this, "tile name", 0, 5 );
         });
         
-        var newList = "<tr>";
+        var newList = "<p>";
         if ( bValid ) {
           $( "#name" ).each(function() {
-            newList = "<td>" + this.val() + "</td>";
+            newList = newList + this.val() + " ";
           });
-          $( "#users tbody" ).append( newList + "</tr>" );
+          $( "#users" ).append( newList + "</p>" );
           $( this ).dialog( "close" );
         }
+
       },
       Cancel: function() {
         $( this ).dialog( "close" );
@@ -128,32 +129,7 @@ $(function() {
     </form>
   </div>
 
-<div id="users-contain" class="ui-widget">
-  <table id="users" class="ui-widget ui-widget-content">
-    <thead>
-      <tr class="ui-widget-header ">
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>        
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>        
-        <th>10</th>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-        <th>15</th>        
-        <th>16</th>
-        <th>17</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+<div id="users" class="ui-widget">
 </div>
 # of level: <input type="number" name="levelnum" id="levelnum"> <input type="submit" id="submit">
 </body>

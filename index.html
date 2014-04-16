@@ -46,6 +46,24 @@ output:after {
 }
 form { position: relative; margin: 5px; width: 1000px;}
 </style>
+</head>
+<body>
+<div id="dialog-form" title="Create new user">
+<p class="validateTips">All form fields are required.</p>
+<form>
+<fieldset>
+<label for="name">Name</label>
+<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+</fieldset>
+</form>
+</div>
+<div id="users-contain" class="ui-widget">
+<form>
+# of level:  <input type="range" name="foo" min="0" max="100">
+<output for="foo" onforminput="value = foo.valueAsNumber;"></output>
+</form>
+<input type="submit">
+</div>
 <script>
 function modifyOffset() {
 	var el, newPoint, newPlace, offset, siblings, k;
@@ -160,23 +178,4 @@ $( "#dialog-form" ).dialog( "open" );
 });
 });
 </script>
-</head>
-<body>
-<div id="dialog-form" title="Create new user">
-<p class="validateTips">All form fields are required.</p>
-<form>
-<fieldset>
-<label for="name">Name</label>
-<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
-</fieldset>
-</form>
-</div>
-<div id="users-contain" class="ui-widget">
-<form>
-# of level:  <input type="range" name="foo" min="0" max="100">
-<output for="foo" onforminput="value = foo.valueAsNumber;"></output>
-</form>
-<input type="submit">
-</div>
-<button id="create-user">Create new user</button>
 </body>

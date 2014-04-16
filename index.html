@@ -104,10 +104,10 @@ $(function() {
         
         var newList = "<p>";
         if ( bValid ) {
-          //$( "#name" ).each(function() {
+          $( "#name" ).each(function() {
             //text[i+1]=$( this ).val();
             newList = newList + $( this ).val()+ "123 ";//text[i] + " ";
-          //});
+          });
           $( "#users" ).append( newList + "</p>" );
           $( this ).dialog( "close" );
         }

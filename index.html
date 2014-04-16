@@ -87,9 +87,9 @@ $(function() {
         
         var newList = "<p>";
         if ( bValid ) {
-          //$( "#name" ).each(function() {
-          //  newList = newList + this.val() + " ";
-          //});
+          $( "#name" ).each(function() {
+            newList = newList + this.val() + " ";
+          });
           $( "#users" ).append( newList + "</p>" );
           $( this ).dialog( "close" );
         }

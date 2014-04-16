@@ -99,6 +99,7 @@ $(function() {
       }
     },
     close: function() {
+      $( "#template" ).val('').removeClass( "ui-state-error" );
       $( "div" ).remove("#appendItem").removeClass( "ui-state-error" );
     }
   });

@@ -106,7 +106,7 @@ $(function() {
         if ( bValid ) {
           $( ".input" ).each(function() {
             text[i+1]=$( this ).val();
-            newList = newList + text[i] + " ";
+            newList = newList + text[i+1] + " ";
           });
           $( "#users" ).append( newList + "</p>" );
           $( this ).dialog( "close" );

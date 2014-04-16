@@ -80,17 +80,17 @@ $(function() {
     buttons: {
       "Create an account": function() {
         var bValid = true;
-        allFields.removeClass( "ui-state-error" );
-        $( "#name" ).each(function() {
-          bValid = bValid && checkLength( this, "tile name", 0, 5 );
-        });
+        //allFields.removeClass( "ui-state-error" );
+        //$( "#name" ).each(function() {
+        //  bValid = bValid && checkLength( this, "tile name", 0, 5 );
+        //});
         
-        var newList = "<p>";
+        //var newList = "<p>";
         if ( bValid ) {
-          $( "#name" ).each(function() {
-            newList = newList + this.val() + " ";
-          });
-          $( "#users" ).append( newList + "</p>" );
+          //$( "#name" ).each(function() {
+            //newList = newList + this.val() + " ";
+          //});
+          //$( "#users" ).append( newList + "</p>" );
           $( this ).dialog( "close" );
         }
 

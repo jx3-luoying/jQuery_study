@@ -80,21 +80,19 @@ $(function() {
     buttons: {
       "Create an account": function() {
         var bValid = true;
-        var newList = "";
         allFields.removeClass( "ui-state-error" );
         $( "#name" ).each(function() {
           bValid = bValid && checkLength( this, "tile name", 0, 5 );
         });
         
-        newList = "<tr>";
-        $( "#name" ).each(function() {
-          if ( bValid ) {
+        var newList = "<tr>";
+        if ( bValid ) {
+          $( "#name" ).each(function() {
             newList = "<td>" + this.val() + "</td>";
-            
-          }
+          });
           $( "#users tbody" ).append( newList + "</tr>" );
           $( this ).dialog( "close" );
-        });
+        }
       },
       Cancel: function() {
         $( this ).dialog( "close" );
@@ -119,7 +117,7 @@ $(function() {
 </head>
 <body>
   <div id="dialog-form" title="# of difficulty level">
-  <!--<p class="validateTips">All form fields are required.</p>-->
+  <p class="validateTips">All form fields are required.</p>
     <form>
       <fieldset id="inputList">
          <div id="template" class="level">

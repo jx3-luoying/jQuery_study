@@ -36,7 +36,7 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
 </div>
 # of level: <input type="number" name="levelnum" id="levelnum"> <input type="submit" id="submit">
 <script>
-/*var text=new Array(18);
+var text=new Array(18);
   text[0] = " ";
   text[1] = "依萍";
   text[2] = "二勾";
@@ -54,7 +54,7 @@ div#users-contain table td, div#users-contain table th { border: 1px solid #eee;
   text[14] = "波波";
   text[15] = "白白";
   text[16] = "提子";
-  text[17] = "山山";*/
+  text[17] = "山山";
   
 $(function() {
   var name = $( "#name" ),
@@ -105,8 +105,8 @@ $(function() {
         var newList = "<p>";
         if ( bValid ) {
           $( ".input" ).each(function() {
-            //text[i+1]=$( this ).val();
-            newList = newList + $( this ).val()+ "123 ";//text[i] + " ";
+            text[i+1]=$( this ).val();
+            newList = newList + text[i] + " ";
           });
           $( "#users" ).append( newList + "</p>" );
           $( this ).dialog( "close" );

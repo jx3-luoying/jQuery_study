@@ -98,7 +98,7 @@ $(function() {
         var bValid = true;
         allFields.removeClass( "ui-state-error" );
         $( "#name" ).each(function() {
-          bValid = bValid && checkLength( this, "tile name", 0, 5 );
+          bValid = bValid && checkLength( $( this ), "tile name", 0, 5 );
         });
         
         var newList = "<p>";
